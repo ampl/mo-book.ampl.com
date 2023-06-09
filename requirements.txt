@@ -6,7 +6,7 @@ sphinxcontrib-mermaid
 ghp-import
 
 # libraries for specific application
-ccxt
-graphviz
+#ccxt
+#graphviz
 
 
