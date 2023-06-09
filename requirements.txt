@@ -5,9 +5,6 @@ sphinx
 sphinxcontrib-mermaid
 ghp-import
 
-# libraries for most notebooks
-pyomo
-
 # libraries for specific application
 ccxt
 graphviz

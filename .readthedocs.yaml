@@ -9,6 +9,10 @@ build:
       # Generate the Sphinx configuration for this Jupyter Book so it builds.
       - "jupyter-book config sphinx ."
 
+python:
+   install:
+   - requirements: requirements.txt
+
 sphinx:
   builder: html
   fail_on_warning: true
