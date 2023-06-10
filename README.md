@@ -1,3 +1,3 @@
-# Companion Notebooks for Mathematical Optimization
+# Mathematical Optimization with AMPL in Python
 
-This is the source repository for [Mathematical Optimization](http://mobook.github.io/MO-book/).
+This is the source repository for [Data-Driven Mathematical Optimization with AMPL in Python](https://mo-book-with-ampl.readthedocs.io/).
