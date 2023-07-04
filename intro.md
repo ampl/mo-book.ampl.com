@@ -8,7 +8,7 @@ Welcome to this repository of companion notebooks for *Data-Driven Mathematical 
 
 ## Getting started
 
-The notebooks in this repository make extensive use of [AMPLPY](https://amplpy.readthedocs.io/) which is an interface that allows developers to access the features of [AMPL](ampl.com) from within Python. AMPL (A Mathematical Programming Language) is an algebraic modeling language to describe and solve high-complexity problems in large-scale optimization. Natural mathematical modeling syntax lets you formulate optimization models the way you think about them. AMPL's new Python ecosystem allows you to collaborate, ideate, and prototype to build full optimization applications and deploy them to larger systems.
+The notebooks in this repository make extensive use of [AMPLPY](https://amplpy.readthedocs.io/) which is an interface that allows developers to access the features of [AMPL](https://ampl.com) from within Python. AMPL (A Mathematical Programming Language) is an algebraic modeling language to describe and solve high-complexity problems in large-scale optimization. Natural mathematical modeling syntax lets you formulate optimization models the way you think about them. AMPL's new Python ecosystem allows you to collaborate, ideate, and prototype to build full optimization applications and deploy them to larger systems.
 
 All notebooks in this repository can be opened and run in Google Colab. A launch icon appearing at the top of a page (look for the rocket) indicates the notebook can be opened as an executable document. Selecting Colab will reopen the notebook in Google Colab. Cells inside of the notebooks will perform any necessary installations of AMPLPY and solvers needed to execute the code within the notebook.
 
