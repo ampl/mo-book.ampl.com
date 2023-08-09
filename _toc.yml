@@ -86,7 +86,7 @@ chapters:
 
 - file: notebooks/appendix/appendix.md
   sections:
-  - file: notebooks/appendix/ampl-style-guide.md
-  - file: notebooks/appendix/amplpy-style-guide.md
+  - file: notebooks/appendix/ampl-style-guide.ipynb
+  - file: notebooks/appendix/amplpy-style-guide.ipynb
 
 - file: genindex.md 
