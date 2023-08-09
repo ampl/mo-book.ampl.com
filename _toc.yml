@@ -86,7 +86,7 @@ chapters:
 
 - file: notebooks/appendix/appendix.md
   sections:
-  - file: notebooks/appendix/pyomo-style-guide.md
-  - file: notebooks/appendix/functional-programming-pyomo.ipynb
+  - file: notebooks/appendix/ampl-style-guide.md
+  - file: notebooks/appendix/amplpy-style-guide.md
 
 - file: genindex.md 
