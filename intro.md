@@ -37,6 +37,6 @@ title     = "Data-Driven Mathematical Optimization with AMPL in Python",
 author    = "Postek, Krzysztof and Zocca, Alessandro and Gromicho, Joaquim and Kantor, Jeffrey"
 year      = 2023,
 publisher = "Online",
-url       = "https://mo-book-with-ampl.readthedocs.io/"
+url       = "https://mo-book.ampl.com"
 }
 ```
