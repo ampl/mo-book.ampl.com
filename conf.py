@@ -6,7 +6,7 @@
 author = 'The MO Book Group'
 bibtex_bibfiles = ['references.bib']
 comments_config = {'hypothesis': False, 'utterances': False}
-copyright = '2022'
+copyright = '2023'
 exclude_patterns = ['**.ipynb_checkpoints', '**.pytest_cache', '.DS_Store', 'Thumbs.db', '_build', 'tools']
 extensions = ['sphinx_togglebutton', 'sphinx_copybutton', 'myst_nb', 'jupyter_book', 'sphinx_thebe', 'sphinx_comments', 'sphinx_external_toc', 'sphinx.ext.intersphinx', 'sphinx_design', 'sphinx_book_theme', 'sphinxcontrib.bibtex', 'sphinx_jupyterbook_latex']
 external_toc_exclude_missing = True
