@@ -32,7 +32,7 @@ We are a group of researchers and educators who came together with a common purp
 If you wish to cite this work, please use
 
 ```
-@book{PostekZocca2022,
+@book{PostekZocca2023,
 title     = "Data-Driven Mathematical Optimization with AMPL in Python",
 author    = "Postek, Krzysztof and Zocca, Alessandro and Gromicho, Joaquim and Kantor, Jeffrey"
 year      = 2023,
