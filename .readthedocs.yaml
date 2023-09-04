@@ -15,7 +15,6 @@ python:
 
 formats:
    - pdf
-   - epub
 
 sphinx:
   builder: html
