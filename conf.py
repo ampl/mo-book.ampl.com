@@ -78,11 +78,14 @@ pygments_style = "sphinx"
 suppress_warnings = ["myst.domains"]
 use_jupyterbook_latex = True
 use_multitoc_numbering = False
+latex_elements = {
+    "extraclassoptions": "openany",  # do not leave empty pages
+}
 latex_documents = [
     (
         "intro",
         "MO-BOOK-With-AMPL.tex",
-        "MO-BOOK-With-AML",
+        "Data-Driven Mathematical Optimization with AMPL in Python",
         "The MO Book Group",
         "manual",
     ),
