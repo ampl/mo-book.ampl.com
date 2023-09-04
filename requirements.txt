@@ -1,12 +1,10 @@
 # libraries for book development
 jupyter-book
-mermaid
+#mermaid
 sphinx
-sphinxcontrib-mermaid
+#sphinxcontrib-mermaid
 #ghp-import
 
 # libraries for specific application
 #ccxt
 #graphviz
-
-
