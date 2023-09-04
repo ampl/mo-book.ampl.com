@@ -80,7 +80,7 @@ use_jupyterbook_latex = True
 use_multitoc_numbering = False
 latex_documents = [
     (
-        "index",
+        "intro",
         "MO-BOOK-With-AMPL.tex",
         "MO-BOOK-With-AML",
         "The MO Book Group",
