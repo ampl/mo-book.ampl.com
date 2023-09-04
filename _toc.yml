@@ -1,7 +1,7 @@
 # Table of contents
 
 format: jb-book
-root: intro.md
+root: index.md
 chapters:
 - file: notebooks/01/01.00.md
   sections:

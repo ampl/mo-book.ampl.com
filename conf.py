@@ -83,7 +83,7 @@ use_multitoc_numbering = False
 # }
 latex_documents = [
     (
-        "intro",
+        "index",
         "MO-BOOK-With-AMPL.tex",
         "Data-Driven Mathematical Optimization with AMPL in Python",
         "The MO Book Group",
