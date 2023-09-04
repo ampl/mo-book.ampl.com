@@ -3,7 +3,7 @@ jupyter-book
 mermaid
 sphinx
 sphinxcontrib-mermaid
-ghp-import
+#ghp-import
 
 # libraries for specific application
 #ccxt

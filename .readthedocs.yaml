@@ -13,6 +13,10 @@ python:
    install:
    - requirements: requirements.txt
 
+formats:
+   - pdf
+   - epub
+
 sphinx:
   builder: html
   fail_on_warning: true

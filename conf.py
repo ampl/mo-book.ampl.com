@@ -51,12 +51,12 @@ html_theme_options = {
     "extra_footer": "",
     "home_page_in_toc": True,
     "announcement": "",
-    "analytics": {"google_analytics_id": ""},
+    "analytics": {"google_analytics_id": "G-TB617QHPDG"},
     "use_repository_button": True,
     "use_edit_page_button": False,
     "use_issues_button": True,
 }
-html_title = "Companion Notebooks for Data-Driven Optimization in Python"
+html_title = "Data-Driven Mathematical Optimization with AMPL in Python"
 latex_engine = "pdflatex"
 myst_enable_extensions = [
     "colon_fence",

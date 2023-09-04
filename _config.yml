@@ -3,6 +3,7 @@
 
 title: Data-Driven Mathematical Optimization with AMPL in Python
 author: The MO Book Group
+copyright: "2023"
 logo: media/logo-02.png
 exclude_patterns: [.DS_Store, "**.ipynb_checkpoints", "**.pytest_cache", "tools"]
 
@@ -21,6 +22,8 @@ execute:
 
 # Define the name of the latex output file for PDF builds
 latex:
+  latex_engine: pdflatex
+  use_jupyterbook_latex: true
   latex_documents:
     targetname: MO-book.tex
     
