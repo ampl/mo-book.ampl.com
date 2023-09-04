@@ -79,7 +79,7 @@ suppress_warnings = ["myst.domains"]
 use_jupyterbook_latex = True
 use_multitoc_numbering = False
 latex_elements = {
-    "extraclassoptions": "openany",  # do not leave empty pages
+    "extraclassoptions": "oneside",  # do not leave empty pages
 }
 latex_documents = [
     (
