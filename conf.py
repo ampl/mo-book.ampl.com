@@ -80,7 +80,7 @@ use_jupyterbook_latex = True
 use_multitoc_numbering = False
 latex_elements = {
     "extraclassoptions": "oneside",  # do not leave empty pages
-    "tableofcontents": "\\tableofcontents",
+    "tableofcontents": " ",
 }
 latex_documents = [
     (
