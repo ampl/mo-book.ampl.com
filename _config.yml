@@ -37,7 +37,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/fdabrandao/MO-book-with-AMPL  # Online location of your book
+  url: https://github.com/ampl/mo-book.ampl.com  # Online location of your book
   branch: dev  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
