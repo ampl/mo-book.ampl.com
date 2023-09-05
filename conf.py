@@ -78,9 +78,9 @@ pygments_style = "sphinx"
 suppress_warnings = ["myst.domains"]
 use_jupyterbook_latex = True
 use_multitoc_numbering = False
-# latex_elements = {
-#     "extraclassoptions": "oneside",  # do not leave empty pages
-# }
+latex_elements = {
+    "extraclassoptions": "oneside",  # do not leave empty pages
+}
 latex_documents = [
     (
         "index",
