@@ -57,7 +57,7 @@ html_theme_options = {
     "use_issues_button": True,
 }
 html_title = "Data-Driven Mathematical Optimization with AMPL in Python"
-latex_engine = "pdflatex"
+#latex_engine = "pdflatex"
 myst_enable_extensions = [
     "colon_fence",
     "dollarmath",
@@ -88,6 +88,6 @@ latex_documents = [
         "MO-BOOK-With-AMPL.tex",
         "Data-Driven Mathematical Optimization with AMPL in Python",
         "The MO Book Group",
-        "howto",
+        "manual",
     ),
 ]
