@@ -80,7 +80,7 @@ use_jupyterbook_latex = True
 use_multitoc_numbering = False
 latex_elements = {
     "extraclassoptions": "oneside",  # do not leave empty pages
-    "tableofcontents": "\\tableofcontents",
+    "tableofcontents": "\\sphinxtableofcontents",
 }
 latex_documents = [
     (
@@ -88,6 +88,6 @@ latex_documents = [
         "MO-BOOK-With-AMPL.tex",
         "Data-Driven Mathematical Optimization with AMPL in Python",
         "The MO Book Group",
-        "manual",
+        "howto",
     ),
 ]
