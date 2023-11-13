@@ -16,7 +16,6 @@ python:
 
 formats:
    - pdf
-   - htmlzip
 
 sphinx:
   builder: html
