@@ -33,8 +33,8 @@ extensions = [
 external_toc_exclude_missing = True
 external_toc_path = "_toc.yml"
 html_baseurl = ""
-html_favicon = ""
-html_logo = "media/logo-02.png"
+html_favicon = "media/cropped-favicon-raw-192x192.png"
+html_logo = "media/logo-03.png"
 html_sourcelink_suffix = ""
 html_theme = "sphinx_book_theme"
 html_theme_options = {
@@ -58,7 +58,7 @@ html_theme_options = {
     "use_issues_button": True,
     "navigation_with_keys": True,
 }
-html_title = "Data-Driven Mathematical Optimization with AMPL in Python"
+html_title = "Hands-On Optimization with AMPL in Python"
 # latex_engine = "pdflatex"
 myst_enable_extensions = [
     "colon_fence",
@@ -88,7 +88,7 @@ latex_documents = [
     (
         "index",
         "MO-BOOK-With-AMPL.tex",
-        "Data-Driven Mathematical Optimization with AMPL in Python",
+        "Hands-On Optimization with AMPL in Python",
         "The MO Book Group",
         "manual",
     ),
