@@ -14,6 +14,7 @@ exclude_patterns = [
     "Thumbs.db",
     "_build",
     "tools",
+    "theme",
 ]
 extensions = [
     "sphinx_togglebutton",

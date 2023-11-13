@@ -1,0 +1,85 @@
+[build-system]
+requires = ["sphinx-theme-builder >= 0.2.0a7"]
+build-backend = "sphinx_theme_builder"
+
+[tool.sphinx-theme-builder]
+node-version = "16.13.2"
+theme-name = "sphinx_book_theme"
+additional-compiled-static-assets = [
+  "locales/"
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
+
+[project]
+name = "sphinx-book-theme"
+description = "A clean book theme for scientific explanations and documentation with Sphinx"
+dynamic = ["version"]
+readme = "README.md"
+
+requires-python = ">=3.7"
+dependencies = [
+  "sphinx>=4,<7",
+  "pydata-sphinx-theme>=0.13.3",
+]
+
+license = { file = "LICENSE" }
+# TODO: Add email of the maintainer
+maintainers = [
+  { name = "Executable Books Team", email = "executablebooks@gmail.com" },
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3",
+  "Framework :: Sphinx",
+  "Framework :: Sphinx :: Theme",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+code_style = [
+    "pre-commit"
+]
+doc = [
+    "ablog",
+    "ipywidgets",
+    "folium",
+    "numpy",
+    "matplotlib",
+    "numpydoc",
+    "myst-nb",
+    "nbclient",
+    "pandas",
+    "plotly",
+    "sphinx-design",
+    "sphinx-examples",
+    "sphinx-copybutton",
+    "sphinx-tabs<=3.4.0", # sphinx-tabs 3.4.1 needs docutils >.17, which would conflict with our pin above
+    "docutils==0.17.1", # docutils 0.18, 0.19 need a patch fix https://sourceforge.net/p/docutils/patches/195/, un-pin when 0.20 is released
+    "sphinx-togglebutton",
+    "sphinx-thebe",
+    "sphinxcontrib-bibtex",
+    "sphinxcontrib-youtube",
+    "sphinxext-opengraph",
+]
+test = [
+    "beautifulsoup4",
+    "coverage",
+    "myst-nb",
+    "pytest",
+    "pytest-cov",
+    "pytest-regressions",
+    "sphinx_thebe",
+]
+
+[project.entry-points]
+"sphinx.html_themes" = { sphinx_book_theme = "sphinx_book_theme" }
+
+[project.urls]
+Repository = "https://github.com/executablebooks/sphinx-book-theme"
+Documentation = "https://sphinx-book-theme.readthedocs.io/"
