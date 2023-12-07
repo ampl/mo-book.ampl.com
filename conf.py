@@ -58,7 +58,7 @@ html_theme_options = {
     "use_issues_button": True,
     "navigation_with_keys": True,
 }
-html_title = "Hands-On Optimization with AMPL in Python"
+html_title = "Hands-On Mathematical Optimization with AMPL in Python"
 # latex_engine = "pdflatex"
 myst_enable_extensions = [
     "colon_fence",
@@ -88,7 +88,7 @@ latex_documents = [
     (
         "index",
         "MO-BOOK-With-AMPL.tex",
-        "Hands-On Optimization with AMPL in Python",
+        "Hands-On Mathematical Optimization with AMPL in Python",
         "The MO Book Group",
         "manual",
     ),
