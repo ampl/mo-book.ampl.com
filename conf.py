@@ -6,7 +6,7 @@
 author = "The MO Book Group"
 bibtex_bibfiles = ["references.bib"]
 comments_config = {"hypothesis": False, "utterances": False}
-copyright = "2023"
+copyright = "2024"
 exclude_patterns = [
     "**.ipynb_checkpoints",
     "**.pytest_cache",
