@@ -1,0 +1,11 @@
+sphinx-book-theme @ git+https://github.com/ampl/mo-book.ampl.com#subdirectory=theme/sphinx-book-theme-1.0.1
+# libraries for book development
+jupyter-book==0.15.1
+#mermaid
+sphinx==4.2.0
+#sphinxcontrib-mermaid
+#ghp-import
+
+# libraries for specific application
+#ccxt
+#graphviz
