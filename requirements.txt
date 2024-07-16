@@ -62,7 +62,7 @@ six==1.16.0
 snowballstemmer==2.2.0
 soupsieve==2.5
 Sphinx==4.2.0
--e git+ssh://git@github.com/ampl/mo-book.ampl.com.git@0947517b746ca44bbc77599ac31a15b5c647e4fb#egg=sphinx_book_theme&subdirectory=theme/sphinx-book-theme-1.0.1
+sphinx-book-theme @ git+https://github.com/ampl/mo-book.ampl.com#subdirectory=theme/sphinx-book-theme-1.0.1
 sphinx-comments==0.0.3
 sphinx-copybutton==0.5.2
 sphinx-jupyterbook-latex==0.5.2
