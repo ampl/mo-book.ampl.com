@@ -21,3 +21,4 @@ sphinxcontrib-youtube
 sphinx-examples
 sphinx-tabs
 sphinxext-opengraph
+numpy
