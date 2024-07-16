@@ -1,7 +1,7 @@
 # MO-BOOK: Hands-On Mathematical Optimization with AMPL in Python 🐍
 
 Welcome to this repository of notebooks *Hands-On Mathematical Optimization with AMPL in Python*,
-also know as *Data-Driven Mathematical Optimization with AMPL in Python*, or *MO-Book With AMPL*, a project currently under development with completion expected by the end of 2023.
+also known as *Data-Driven Mathematical Optimization with AMPL in Python*, or *MO-Book With AMPL*.
 This is the AMPL version of *Hands-On Mathematical Optimization in Python*. These notebooks introduce the concepts and tools of mathematical optimization with examples from a range of disciplines. The goals of these notebooks are to:
 
 * provide a foundation for hands-on learning of mathematical optimization,
