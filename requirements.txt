@@ -1,4 +1,4 @@
-ablog==0.11.10
+ablog==0.10.33
 accessible-pygments==0.0.4
 alabaster==0.7.13
 appnope==0.1.3
