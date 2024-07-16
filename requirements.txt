@@ -19,3 +19,4 @@ ablog
 numpydoc
 sphinxcontrib-youtube
 sphinx-examples
+sphinx-tabs
