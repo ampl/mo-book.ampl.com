@@ -1,24 +1,2 @@
-sphinx-book-theme @ git+https://github.com/ampl/mo-book.ampl.com#subdirectory=theme/sphinx-book-theme-1.0.1
-# libraries for book development
-jupyter-book==0.15.1
-#mermaid
-sphinx==4.2.0
-#sphinxcontrib-mermaid
-#ghp-import
-
-# libraries for specific application
-#ccxt
-#graphviz
-
-sphinxcontrib-applehelp==1.0.4
-sphinxcontrib-devhelp==1.0.2
-sphinxcontrib-htmlhelp==2.0.1
-sphinxcontrib-qthelp==1.0.3
-sphinxcontrib-serializinghtml==1.1.5
-ablog
-numpydoc
-sphinxcontrib-youtube
-sphinx-examples
-sphinx-tabs
-sphinxext-opengraph
-numpy
+jupyter-book==1.0.3
+sphinx==7.4.7

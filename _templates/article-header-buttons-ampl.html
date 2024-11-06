@@ -1,0 +1,23 @@
+{% from "../macros/buttons.html" import render_funcs with context %}
+
+<div class="article-header-buttons">
+{%- for button in header_buttons -%}
+{% set btype = button.get("type") %}
+{% set bopts = button.copy() %}
+{% set _ = bopts.pop("type") %}
+{{ render_funcs[btype](**bopts) }}
+{%- endfor -%}
+
+{#- Extra theme buttons #}
+{% include "theme-switcher.html" %}
+{% include "search-button.html" %}
+{% include "toggle-secondary-sidebar.html" %}
+<div class="dropdown">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-solid fa-arrows-split-up-and-left"></i>
+  </button>
+  <ul class="dropdown-menu">
+    {%- include "ampl-pages.html" with context -%}
+  </ul>
+</div>
+</div>

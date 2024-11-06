@@ -14,7 +14,6 @@ exclude_patterns = [
     "Thumbs.db",
     "_build",
     "tools",
-    "theme",
 ]
 extensions = [
     "sphinx_togglebutton",
@@ -45,6 +44,7 @@ html_theme_options = {
         "jupyterhub_url": "",
         "thebe": False,
         "colab_url": "https://colab.research.google.com",
+        "deepnote_url": "",
     },
     "path_to_docs": "",
     "repository_url": "https://github.com/ampl/mo-book.ampl.com",
@@ -52,14 +52,18 @@ html_theme_options = {
     "extra_footer": "",
     "home_page_in_toc": True,
     "announcement": "",
-    "analytics": {"google_analytics_id": "G-TB617QHPDG"},
+    "analytics": {
+        "google_analytics_id": "G-TB617QHPDG",
+        "plausible_analytics_domain": "",
+        "plausible_analytics_url": "https://plausible.io/js/script.js",
+    },
     "use_repository_button": True,
     "use_edit_page_button": False,
     "use_issues_button": True,
-    "navigation_with_keys": True,
+    "article_header_end": ["article-header-buttons-ampl.html"],
 }
-html_title = "Hands-On Mathematical Optimization with AMPL in Python"
-# latex_engine = "pdflatex"
+html_title = "Data-Driven Mathematical Optimization with AMPL in Python"
+latex_engine = "pdflatex"
 myst_enable_extensions = [
     "colon_fence",
     "dollarmath",
@@ -78,6 +82,7 @@ nb_output_stderr = "show"
 numfig = True
 pygments_style = "sphinx"
 suppress_warnings = ["myst.domains"]
+templates_path = ["_templates"]
 use_jupyterbook_latex = True
 use_multitoc_numbering = False
 latex_elements = {

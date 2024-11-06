@@ -1,10 +1,16 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
+# Instructions:
+#  - Build: $ jupyter-book build .
+#  - Build config: $ jupyter-book config sphinx .
+#  - Build with sphinx: $ python -m sphinx -b html . _build/html
+#  - Open index.html: open _build/html/index.html
+
 title: Data-Driven Mathematical Optimization with AMPL in Python
 author: The MO Book Group
-copyright: "2023"
-logo: media/logo-02.png
+copyright: "2024"
+logo: media/logo-03.png
 exclude_patterns: [.DS_Store, "**.ipynb_checkpoints", "**.pytest_cache", "tools"]
 
 # Launch on Google Colab button
@@ -26,10 +32,6 @@ latex:
   use_jupyterbook_latex: true
   latex_documents:
     targetname: MO-book.tex
-    
-#sphinx:
-#  extra_extensions:
-#    - sphinxcontrib.mermaid
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
@@ -43,7 +45,19 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  favicon: media/cropped-favicon-raw-192x192.png
   use_issues_button: true
   use_repository_button: true
   use_multitoc_numbering: false
+  home_page_in_navbar: true
   google_analytics_id: G-TB617QHPDG
+  baseurl: https://ampl.com/mo-book/
+
+sphinx:
+  # extra_extensions:
+  #  - sphinxcontrib.mermaid
+  recursive_update: true
+  config:
+    templates_path: ["_templates"]
+    html_theme_options:
+      "article_header_end": ["article-header-buttons-ampl.html"]
