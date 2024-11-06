@@ -1,5 +1,5 @@
 jupyter-book==1.0.3
-sphinx==7.4.7
-ablog==0.11.12
-numpydoc==1.8.0
-sphinxcontrib-youtube==1.4.1
+#sphinx==7.4.7
+#ablog==0.11.12
+#numpydoc==1.8.0
+#sphinxcontrib-youtube==1.4.1
