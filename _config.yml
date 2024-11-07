@@ -45,7 +45,7 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  favicon: media/cropped-favicon-raw-192x192.png
+  favicon: https://raw.githubusercontent.com/ampl/ampl.github.io/master/themes/static/ampl-favicon.png
   use_issues_button: true
   use_repository_button: true
   use_multitoc_numbering: false
