@@ -26,11 +26,13 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx_design",
     "sphinx_book_theme",
+    "sphinxcontrib.googleanalytics",
     "sphinxcontrib.bibtex",
     "sphinx_jupyterbook_latex",
 ]
 external_toc_exclude_missing = True
 external_toc_path = "_toc.yml"
+googleanalytics_id = "G-TB617QHPDG"
 html_baseurl = "https://ampl.com/mo-book/"
 html_favicon = "https://raw.githubusercontent.com/ampl/ampl.github.io/master/themes/static/ampl-favicon.png"
 html_logo = "media/logo-03.png"
@@ -53,7 +55,7 @@ html_theme_options = {
     "home_page_in_toc": True,
     "announcement": "",
     "analytics": {
-        "google_analytics_id": "G-TB617QHPDG",
+        "google_analytics_id": "",
         "plausible_analytics_domain": "",
         "plausible_analytics_url": "https://plausible.io/js/script.js",
     },

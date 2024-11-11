@@ -1,2 +1,2 @@
 jupyter-book==1.0.3
-
+sphinxcontrib.googleanalytics==0.4

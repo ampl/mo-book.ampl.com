@@ -50,14 +50,15 @@ html:
   use_repository_button: true
   use_multitoc_numbering: false
   home_page_in_navbar: true
-  google_analytics_id: G-TB617QHPDG
   baseurl: https://ampl.com/mo-book/
 
 sphinx:
-  # extra_extensions:
+  extra_extensions:
+    - sphinxcontrib.googleanalytics
   #  - sphinxcontrib.mermaid
   recursive_update: true
   config:
     templates_path: ["_templates"]
+    googleanalytics_id: G-TB617QHPDG
     html_theme_options:
       "article_header_end": ["article-header-buttons-ampl.html"]
