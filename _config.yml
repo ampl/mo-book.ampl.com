@@ -7,7 +7,7 @@
 #  - Build with sphinx: $ python -m sphinx -b html . _build/html
 #  - Open index.html: open _build/html/index.html
 
-title: Data-Driven Mathematical Optimization with AMPL in Python
+title: Hands-On Mathematical Optimization with AMPL in Python
 author: The MO Book Group
 copyright: "2024"
 logo: media/logo-03.png
