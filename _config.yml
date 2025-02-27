@@ -9,7 +9,7 @@
 
 title: Hands-On Mathematical Optimization with AMPL in Python
 author: The MO Book Group
-copyright: "2024"
+copyright: "2025"
 logo: media/logo-03.png
 exclude_patterns: [.DS_Store, "**.ipynb_checkpoints", "**.pytest_cache", "tools"]
 
