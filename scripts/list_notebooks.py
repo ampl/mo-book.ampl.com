@@ -44,6 +44,8 @@ def should_skip(notebook_path):
         return True
     with open(notebook_path, "r", encoding="utf-8") as f:
         content = f.read()
+        if "amplpy" not in content:
+            return True
         return bool(SKIP_REGEX.search(content))
 
 
