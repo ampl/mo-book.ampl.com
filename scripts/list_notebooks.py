@@ -98,7 +98,6 @@ def find_missing_installs(notebook_path):
         "ast",
         "sys",
         "os",
-        "ipywidgets",
         "bisect",
         "itertools",
         "timeit",
@@ -113,7 +112,7 @@ def find_missing_installs(notebook_path):
             installed |= extract_installed_packages(source)
 
     # Rename packages with different import and package names
-    package_name = {"sklearn": "scikit-learn"}
+    package_name = {"sklearn": "scikit-learn", "mpl_toolkits": "matplotlib"}
     imported = {package_name.get(pkg, pkg) for pkg in imported}
 
     missing = {pkg for pkg in imported if pkg.lower() not in installed}
