@@ -21,7 +21,7 @@ jobs:
         notebooks=$(python scripts/list_notebooks.py --json)
         echo "notebooks=$notebooks" >> $GITHUB_OUTPUT
 
-  test-notebooks:
+  test-notebook:
     needs: discover-notebooks
     strategy:
       matrix:
@@ -48,7 +48,7 @@ jobs:
         python -m amplpy.modules install base
         python -m amplpy.modules activate $AMPLKEY_UUID
 
-    - name: Test notebook in ${{ matrix.notebook }}
+    - name: Test notebook ${{ matrix.notebook }}
       run: |
         echo "Testing notebook: ${{ matrix.notebook }}"
         pytest --nbval-lax ${{ matrix.notebook }}
