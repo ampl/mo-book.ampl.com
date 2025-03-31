@@ -174,7 +174,7 @@ def main():
 
     else:
         if args.json:
-            print(json.dumps(notebooks, indent=2))
+            print(json.dumps(notebooks))
         else:
             for nb in notebooks:
                 print(nb)
