@@ -44,7 +44,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install nbval pytest
-        pip install amplpy==0.15.0b2
+        pip install amplpy==0.15.0b3
         python -m amplpy.modules install base
         python -m amplpy.modules activate $AMPLKEY_UUID
 
