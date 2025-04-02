@@ -43,10 +43,15 @@ jobs:
         AMPLKEY_UUID: ${{ secrets.AMPLKEY_UUID }}
       run: |
         python -m pip install --upgrade pip
-        pip install nbval pytest
+        pip install nbval pytest nbqa black
         pip install amplpy
         python -m amplpy.modules install base
         python -m amplpy.modules activate $AMPLKEY_UUID
+
+    - name: Test notebook formatting ${{ matrix.notebook }}
+      run: |
+        echo "Testing notebook formatting: ${{ matrix.notebook }}"
+        nbqa black ${{ matrix.notebook }} --check
 
     - name: Test notebook ${{ matrix.notebook }}
       run: |

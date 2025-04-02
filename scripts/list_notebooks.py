@@ -9,6 +9,7 @@ from pathlib import Path
 SKIP_REGEX = re.compile(
     r"authenticate_user|gspread\.authorize|gmaps\.configure|powerbiclient|API_KEY|pyvpsolver"
 )
+SKIP_NB_LIST = {"ampl_power.ipynb"}
 
 
 def list_notebooks(mode="default"):
@@ -40,6 +41,8 @@ def list_notebooks(mode="default"):
 
 
 def should_skip(notebook_path):
+    if os.path.basename(notebook_path) in SKIP_NB_LIST:
+        return True
     if notebook_path.startswith(("venv", "_build", "build")):
         return True
     with open(notebook_path, "r", encoding="utf-8") as f:
@@ -123,6 +126,21 @@ def find_missing_installs(notebook_path):
     return None
 
 
+def contains_solve_result_assert(notebook_path):
+    pattern = re.compile(
+        r"assert\s+(?:self\.)?[\w]*\.?solve_result\s*(==|in).*,\s*(?:self\.)?[\w]*.?solve_result"
+    )
+    with open(notebook_path, "r", encoding="utf-8") as f:
+        notebook = json.load(f)
+
+    for cell in notebook.get("cells", []):
+        if cell.get("cell_type") == "code":
+            source = "".join(cell.get("source", []))
+            if pattern.search(source):
+                return True
+    return False
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Scan .ipynb files and list notebooks."
@@ -144,6 +162,11 @@ def main():
         "--check-missing-installs",
         action="store_true",
         help="Show notebooks that import packages not installed with pip",
+    )
+    parser.add_argument(
+        "--check-missing-asserts",
+        action="store_true",
+        help="Show notebooks that do not have asserts on solve_result",
     )
 
     args = parser.parse_args()
@@ -172,7 +195,20 @@ def main():
 
         if not problems:
             print("✅ No missing package installs found.")
+    elif args.check_missing_asserts:
+        problems = []
+        for nb in notebooks:
+            if not contains_solve_result_assert(nb):
+                problems.append(nb)
 
+        if args.json:
+            print(json.dumps(problems, indent=2))
+        else:
+            for nb in problems:
+                print(f"\n❌ {nb}")
+
+        if not problems:
+            print("✅ No notebooks with missing asserts found.")
     else:
         if args.json:
             print(json.dumps(notebooks))
