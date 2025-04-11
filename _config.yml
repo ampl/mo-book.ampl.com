@@ -59,6 +59,8 @@ sphinx:
   recursive_update: true
   config:
     templates_path: ["_templates"]
+    suppress_warnings: ["mystnb.unknown_mime_type"]
     googleanalytics_id: G-TB617QHPDG
     html_theme_options:
       "article_header_end": ["article-header-buttons-ampl.html"]
+    
