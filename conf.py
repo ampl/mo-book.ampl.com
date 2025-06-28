@@ -101,3 +101,4 @@ latex_documents = [
         "manual",
     ),
 ]
+suppress_warnings = ["mystnb.unknown_mime_type"]
