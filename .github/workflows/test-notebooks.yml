@@ -1,0 +1,59 @@
+name: Discover and Test Notebooks
+
+on: [push]
+
+jobs:
+  discover-notebooks:
+    runs-on: ubuntu-latest
+    outputs:
+      notebooks: ${{ steps.set-notebooks.outputs.notebooks }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Find notebooks
+      id: set-notebooks
+      run: |
+        echo "📋 Skipped notebooks:"
+        python scripts/list_notebooks.py --list-skipped
+        echo "▶️ Running tests on:"
+        python scripts/list_notebooks.py
+        notebooks=$(python scripts/list_notebooks.py --json)
+        echo "notebooks=$notebooks" >> $GITHUB_OUTPUT
+
+  test-notebook:
+    needs: discover-notebooks
+    strategy:
+      matrix:
+        notebook: ${{ fromJson(needs.discover-notebooks.outputs.notebooks) }}
+      fail-fast: false
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      env:
+        AMPLKEY_UUID: ${{ secrets.AMPLKEY_UUID }}
+      run: |
+        python -m pip install --upgrade pip
+        pip install nbval==0.11.0 pytest nbqa==1.9.1 black==25.1.0
+        pip install amplpy
+        python -m amplpy.modules install base
+        python -m amplpy.modules activate $AMPLKEY_UUID
+
+    - name: Test notebook formatting ${{ matrix.notebook }}
+      run: |
+        echo "Testing notebook formatting: ${{ matrix.notebook }}"
+        nbqa black ${{ matrix.notebook }} --check
+
+    - name: Test notebook ${{ matrix.notebook }}
+      run: |
+        echo "Testing notebook: ${{ matrix.notebook }}"
+        pytest --nbval-lax ${{ matrix.notebook }}

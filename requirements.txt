@@ -1,2 +1,4 @@
 jupyter-book==1.0.3
 sphinxcontrib.googleanalytics==0.4
+sphinx-sitemap==2.6.0
+

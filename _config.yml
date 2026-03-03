@@ -7,9 +7,9 @@
 #  - Build with sphinx: $ python -m sphinx -b html . _build/html
 #  - Open index.html: open _build/html/index.html
 
-title: Data-Driven Mathematical Optimization with AMPL in Python
+title: Hands-On Mathematical Optimization with AMPL in Python
 author: The MO Book Group
-copyright: "2024"
+copyright: "2025"
 logo: media/logo-03.png
 exclude_patterns: [.DS_Store, "**.ipynb_checkpoints", "**.pytest_cache", "tools"]
 
@@ -59,6 +59,8 @@ sphinx:
   recursive_update: true
   config:
     templates_path: ["_templates"]
+    suppress_warnings: ["mystnb.unknown_mime_type"]
     googleanalytics_id: G-TB617QHPDG
     html_theme_options:
       "article_header_end": ["article-header-buttons-ampl.html"]
+    
