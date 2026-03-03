@@ -43,7 +43,7 @@ jobs:
         AMPLKEY_UUID: ${{ secrets.AMPLKEY_UUID }}
       run: |
         python -m pip install --upgrade pip
-        pip install nbval pytest nbqa black
+        pip install nbval==0.11.0 pytest nbqa==1.9.1 black==25.1.0
         pip install amplpy
         python -m amplpy.modules install base
         python -m amplpy.modules activate $AMPLKEY_UUID
