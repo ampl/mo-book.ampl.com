@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 from matplotlib import patches
-import numpy as np
 
 alpha = 0.4
 

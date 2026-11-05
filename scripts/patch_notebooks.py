@@ -1,11 +1,12 @@
-from list_notebooks import list_notebooks
-import os
 import json
+import os
+
+from list_notebooks import list_notebooks
 
 
 def patch_notebook(notebook_path):
-    notebook = open(notebook_path, "r", encoding="utf-8").read()
-    data = json.loads(notebook)
+    with open(notebook_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
     cells = data["cells"]
 
     if all(
@@ -19,9 +20,11 @@ def patch_notebook(notebook_path):
             cells[i]["execution_count"] = count
             count += 1
 
-    open(notebook_path, "w", newline="\n", encoding="utf-8").write(
-        json.dumps(data, separators=(",", ": "), indent="  ", ensure_ascii=False) + "\n"
-    )
+    with open(notebook_path, "w", newline="\n", encoding="utf-8") as f:
+        f.write(
+            json.dumps(data, separators=(",", ": "), indent="  ", ensure_ascii=False)
+            + "\n"
+        )
     return True
 
 

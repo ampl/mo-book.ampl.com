@@ -1,0 +1,9 @@
+# Ruff configuration for formatting and linting the notebooks and Python
+# scripts, matching the kern project's config: ruff's default lint rule set
+# plus `ruff format`, with notebooks included.
+#
+# Format + fix: ruff check --fix . && ruff format .
+# Check-only:   ruff format --check . && ruff check .   (used in CI)
+
+extend-include = ["*.ipynb"]
+extend-exclude = ["venv", "_build", "build"]

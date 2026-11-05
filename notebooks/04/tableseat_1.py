@@ -1,3 +1,6 @@
+import pyomo.environ as pyo
+
+
 def TableSeat(members, capacity, k, domain=pyo.NonNegativeReals):
     m = pyo.ConcreteModel("Dina's seat plan")
     m.F = pyo.Set(initialize=range(len(members)))

@@ -1,8 +1,8 @@
-import json
-import re
-import os
-import ast
 import argparse
+import ast
+import json
+import os
+import re
 from pathlib import Path
 
 # Define the regex to identify notebooks to skip
@@ -61,11 +61,10 @@ def extract_imports(code):
             if isinstance(node, ast.Import):
                 for n in node.names:
                     imports.add(n.name.split(".")[0])
-            elif isinstance(node, ast.ImportFrom):
-                if node.module:
-                    imports.add(node.module.split(".")[0])
+            elif isinstance(node, ast.ImportFrom) and node.module:
+                imports.add(node.module.split(".")[0])
         return imports
-    except Exception:
+    except (SyntaxError, ValueError):
         return set()
 
 
@@ -87,7 +86,7 @@ def find_missing_installs(notebook_path):
     try:
         with open(notebook_path, "r", encoding="utf-8") as f:
             nb = json.load(f)
-    except Exception as e:
+    except (OSError, ValueError) as e:
         print(f"Could not open {notebook_path}: {e}")
         return None
 

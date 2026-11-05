@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
-from matplotlib import patches
 import numpy as np
+from matplotlib import patches
 
 # describe the betting wheel
 sectors = {
@@ -11,7 +11,7 @@ sectors = {
 
 fig, ax = plt.subplots(1, 1)
 a = np.pi / 6
-for s in sectors.keys():
+for s in sectors:
     b = a + 2 * np.pi * sectors[s]["p"]
     t = np.linspace(a, b, 40)
     c = plt.plot(np.cos(t), np.sin(t))[0].get_color()
