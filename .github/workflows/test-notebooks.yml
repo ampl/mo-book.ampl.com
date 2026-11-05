@@ -48,6 +48,10 @@ jobs:
         python -m amplpy.modules install base
         python -m amplpy.modules activate $AMPLKEY_UUID
 
+    - name: License diagnostics (after activation)
+      continue-on-error: true
+      run: scripts/license_diagnostics.sh
+
     - name: Test notebook formatting ${{ matrix.notebook }}
       run: |
         echo "Testing notebook formatting: ${{ matrix.notebook }}"
@@ -57,3 +61,8 @@ jobs:
       run: |
         echo "Testing notebook: ${{ matrix.notebook }}"
         pytest --nbval-lax ${{ matrix.notebook }}
+
+    - name: License diagnostics (after failure)
+      if: failure()
+      continue-on-error: true
+      run: scripts/license_diagnostics.sh
