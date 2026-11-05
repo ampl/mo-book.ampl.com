@@ -51,7 +51,7 @@ html_theme_options = {
     },
     "path_to_docs": "",
     "repository_url": "https://github.com/ampl/mo-book.ampl.com",
-    "repository_branch": "dev",
+    "repository_branch": "master",
     "extra_footer": "",
     "home_page_in_toc": True,
     "announcement": "",
