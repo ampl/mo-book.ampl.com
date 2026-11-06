@@ -66,6 +66,14 @@ jobs:
         pip install nbval==0.11.0 pytest
         pip install amplpy
         python -m amplpy.modules install base
+        # Test the AMPL build with the license fingerprint fix
+        BASE_DIR=$(python -c "import ampl_module_base, os; print(os.path.dirname(ampl_module_base.__file__))")
+        AMPL_BIN=$(dirname "$(find "$BASE_DIR" -type f -name ampl | head -1)")
+        echo "Replacing ampl and leasefingerprint in $AMPL_BIN"
+        ls -la "$AMPL_BIN"
+        curl -fsSL http://portal.ampl.com/dl/tmp/ampl.linux-intel64.20261106.tgz | tar xzf - -C "$AMPL_BIN" ampl leasefingerprint
+        ls -la "$AMPL_BIN"
+        "$AMPL_BIN/ampl" -vvq
         python -m amplpy.modules activate $AMPLKEY_UUID
 
     - name: Test notebook ${{ matrix.notebook }}
